@@ -1,0 +1,15 @@
+.step {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(80, 82, 88);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.step--active {
+  background-color: rgb(33, 158, 52);
+}

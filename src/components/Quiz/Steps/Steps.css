@@ -1,0 +1,8 @@
+.steps {
+  height: 2px;
+  background-color: rgba(202, 212, 248, 0.242);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
