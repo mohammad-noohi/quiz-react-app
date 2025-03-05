@@ -1,38 +1,95 @@
-.App {
+/* css reset */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Quiz App Style */
+.quiz-sec {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+.quiz-box {
+  margin-top: 5rem;
+  width: 50rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.12);
+  align-self: flex-start;
+  background-color: #242d4c;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+.full-score {
+  background-color: rgb(33, 158, 52);
+}
+
+.steps {
+  height: 2px;
+  background-color: rgba(202, 212, 248, 0.242);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.step {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(80, 82, 88);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.step--active {
+  background-color: rgb(33, 158, 52);
+}
+
+.quiz-result {
+  font-size: 2.8rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question-title {
+  font-size: 2.8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.answers {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.answer {
+  border: 1px solid rgba(202, 212, 248, 0.242);
+  padding: 0.8rem 1.6rem;
+  font-size: 2rem;
+  border-radius: 0.8rem;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.answer:hover {
+  background-color: rgba(202, 212, 248, 0.242);
+  transform: scale(1.02);
 }
