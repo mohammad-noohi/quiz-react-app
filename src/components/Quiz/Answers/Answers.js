@@ -4,12 +4,16 @@ import React from "react";
 // اینو دیگه بلد نیستم فعلا
 
 class Answers extends React.Component {
+  answerHanlder(isCorrect) {
+    this.props.onAnswerToQuestion(isCorrect);
+  }
+
   render() {
     return (
       <div className="answers">
-        {this.props.answers.map(answer => {
+        {this.props.answersData.map(answer => {
           return (
-            <div key={answer.id} className="answer" onClick={this.answerHandler.bind(this, answer.isCorrect)}>
+            <div key={answer.id} className="answer" onClick={this.answerHanlder.bind(this, answer.isCorrect)}>
               {answer.text}
             </div>
           );

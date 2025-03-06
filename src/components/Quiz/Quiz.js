@@ -93,7 +93,7 @@ class Quiz extends React.Component {
           {this.state.quizFinished || (
             <>
               <Question question={this.state.questions[this.state.currentQuestion].questionText} />
-              <div className="answers">
+              {/* <div className="answers">
                 {this.state.questions[this.state.currentQuestion].answerOptions.map(answer => {
                   return (
                     <div key={answer.id} className="answer" onClick={this.answerHandler.bind(this, answer.isCorrect)}>
@@ -101,7 +101,8 @@ class Quiz extends React.Component {
                     </div>
                   );
                 })}
-              </div>
+              </div> */}
+              <Answers answersData={this.state.questions[this.state.currentQuestion].answerOptions} onAnswerToQuestion={this.answerHandler.bind(this)} />
             </>
           )}
         </div>
